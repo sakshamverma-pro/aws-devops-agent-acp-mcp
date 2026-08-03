@@ -2,7 +2,7 @@ FROM --platform=linux/arm64 python:3.12-slim
 
 WORKDIR /app
 
-COPY setup.py setup.cfg README.md LICENSE.txt ./
+COPY setup.py setup.cfg README.md main_readme.md LICENSE.txt ./
 COPY src/ ./src/
 
 RUN pip install --no-cache-dir ".[mcp]"
