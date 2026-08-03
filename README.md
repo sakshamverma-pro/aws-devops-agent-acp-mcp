@@ -6,6 +6,8 @@
 
 Sample **ACP client**, **ACP server**, and **MCP server** for the [AWS DevOps Agent](https://docs.aws.amazon.com/devopsagent/latest/userguide/). Use this repo to integrate operational intelligence into IDEs and agents — locally with Cursor, or in the cloud on **Amazon Bedrock AgentCore**.
 
+**Repository:** [github.com/sakshamverma-pro/aws-devops-agent-acp-mcp](https://github.com/sakshamverma-pro/aws-devops-agent-acp-mcp)
+
 **Start here** → pick the guide that matches what you want to do.
 
 ---
@@ -16,6 +18,7 @@ Sample **ACP client**, **ACP server**, and **MCP server** for the [AWS DevOps Ag
 |------------|-----------|
 | Install, configure, and use the sample locally | [main_readme.md](main_readme.md) |
 | Deploy the MCP server to **Bedrock AgentCore Runtime** | [AGENTCORE_DEPLOYMENT_GUIDE.md](AGENTCORE_DEPLOYMENT_GUIDE.md) |
+| Connect **Cursor** to live AgentCore runtime | [CURSOR_AGENTCORE_INTEGRATION.md](CURSOR_AGENTCORE_INTEGRATION.md) |
 | Set up AWS credentials for AI tools | [setup.md](setup.md) |
 | Connect **Kiro** (ACP or MCP) | [kiro-power/KIRO_QUICKSTART.md](kiro-power/KIRO_QUICKSTART.md) |
 | Connect **Claude Code** | [CLAUDE.md](CLAUDE.md) |
@@ -40,6 +43,7 @@ Sample **ACP client**, **ACP server**, and **MCP server** for the [AWS DevOps Ag
 | [kiro-power/KIRO_QUICKSTART.md](kiro-power/KIRO_QUICKSTART.md) | Step-by-step Kiro setup — ACP path (recommended) and MCP fallback |
 | [kiro-power/POWER.md](kiro-power/POWER.md) | Kiro Power / agent behavior — incident triggers, streaming updates, workflow guidance |
 | [CLAUDE.md](CLAUDE.md) | Claude Code MCP integration — `claude mcp add`, config, and usage patterns |
+| [CURSOR_AGENTCORE_INTEGRATION.md](CURSOR_AGENTCORE_INTEGRATION.md) | Connect **Cursor** to AgentCore Runtime via IAM bridge (`cursor_agentcore_bridge.py`) |
 
 ### AWS DevOps Agent skills & references
 
@@ -69,13 +73,14 @@ Sample **ACP client**, **ACP server**, and **MCP server** for the [AWS DevOps Ag
 ## Repo layout (key paths)
 
 ```text
-sample-aws-devops-agent-acp-mcp/
+aws-devops-agent-acp-mcp/
 ├── README.md                      ← You are here (documentation index)
 ├── main_readme.md                 ← Full project README (install & usage)
 ├── AGENTCORE_DEPLOYMENT_GUIDE.md  ← Deploy MCP to Bedrock AgentCore
 ├── Dockerfile                     ← ARM64 container for AgentCore
 ├── scripts/
-│   └── test_remote_mcp.py         ← Test deployed runtime (IAM SigV4)
+│   ├── test_remote_mcp.py         ← Test deployed runtime (IAM SigV4)
+│   └── cursor_agentcore_bridge.py ← Cursor stdio → AgentCore bridge
 ├── src/aws_devops_agent/
 │   ├── mcp_server.py              ← MCP server (22 tools)
 │   ├── mcp_http_server.py         ← HTTP entry point for AgentCore

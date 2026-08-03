@@ -65,4 +65,4 @@ Retrieve it via `list_executions(task_id)` → `list_journal_records(execution_i
 
 ---
 
-**License**: MIT-0 | **Repository**: https://github.com/aws-samples/sample-aws-devops-agent-acp-mcp
+**License**: MIT-0 | **Repository**: https://github.com/sakshamverma-pro/aws-devops-agent-acp-mcp

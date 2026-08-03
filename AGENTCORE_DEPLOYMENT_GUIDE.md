@@ -120,8 +120,8 @@ aws sts get-caller-identity
 ### Option A — Clone from AWS Samples (recommended)
 
 ```bash
-git clone https://github.com/aws-samples/sample-aws-devops-agent-acp-mcp
-cd sample-aws-devops-agent-acp-mcp
+git clone https://github.com/sakshamverma-pro/aws-devops-agent-acp-mcp.git
+cd aws-devops-agent-acp-mcp
 ```
 
 
@@ -406,7 +406,7 @@ docker buildx create --use --name arm-builder 2>/dev/null || docker buildx use a
 ### 8.3 Build for ARM64
 
 ```bash
-cd sample-aws-devops-agent-acp-mcp
+cd aws-devops-agent-acp-mcp
 
 docker buildx build \
   --platform linux/arm64 \
@@ -832,7 +832,7 @@ python scripts/test_remote_mcp.py
 ## Summary timeline
 
 ```text
-1. Clone sample-aws-devops-agent-acp-mcp
+1. Clone aws-devops-agent-acp-mcp
 2. Add HTTP transport (mcp_server.py, mcp_http_server.py)
 3. Test locally on :8001/mcp
 4. Write Dockerfile (ARM64 + setup.py)
@@ -852,7 +852,7 @@ python scripts/test_remote_mcp.py
 
 - [AWS DevOps Agent User Guide](https://docs.aws.amazon.com/devopsagent/latest/userguide/)
 - [Deploy MCP servers in AgentCore Runtime](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-mcp.html)
-- [Sample repo](https://github.com/aws-samples/sample-aws-devops-agent-acp-mcp)
+- [Repository](https://github.com/sakshamverma-pro/aws-devops-agent-acp-mcp)
 - [AgentCore Runtime protocols](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime.html)
 
 ---

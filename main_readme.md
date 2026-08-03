@@ -9,7 +9,7 @@
 
 A sample implementation of an **ACP client**, **ACP server**, and **MCP server** for the [AWS DevOps Agent](https://docs.aws.amazon.com/devopsagent/latest/userguide/). Use these reference implementations to integrate AI-powered operational intelligence into your IDE or agent — investigate incidents, analyze costs, review architecture, map topology, and generate remediation.
 
-**Version:** 1.0.0 | **License:** MIT-0 | **Status:** Sample / Reference Implementation
+**Version:** 1.0.0 | **License:** MIT-0 | **Status:** Sample / Reference Implementation | **Repository:** [github.com/sakshamverma-pro/aws-devops-agent-acp-mcp](https://github.com/sakshamverma-pro/aws-devops-agent-acp-mcp)
 
 > 💡 **What's included:** A sample ACP server (`acp_server.py`), a streaming ACP client SDK (`acp_client.py`), and an MCP server with 22 tools (`mcp_server.py`). Use these as starting points for building your own integrations with the AWS DevOps Agent APIs.
 
@@ -57,8 +57,8 @@ aws sts get-caller-identity --query Arn --output text | cut -d'/' -f2
 ### 1. Install
 
 ```bash
-git clone https://github.com/aws-samples/sample-aws-devops-agent-acp-mcp
-cd sample-aws-devops-agent-acp-mcp
+git clone https://github.com/sakshamverma-pro/aws-devops-agent-acp-mcp.git
+cd aws-devops-agent-acp-mcp
 pip install -e '.[mcp]'
 ```
 
@@ -342,8 +342,8 @@ Install from source (see Quick Start) and ensure the binary is on your PATH.
 
 ```bash
 # Clone and install in development mode
-git clone https://github.com/aws-samples/sample-aws-devops-agent-acp-mcp
-cd sample-aws-devops-agent-acp-mcp
+git clone https://github.com/sakshamverma-pro/aws-devops-agent-acp-mcp.git
+cd aws-devops-agent-acp-mcp
 pip install -e '.[dev,mcp]'
 
 # Run tests
